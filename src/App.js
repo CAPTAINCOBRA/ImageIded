@@ -64,7 +64,18 @@ function App() {
   }, [imageUrl]);
 
   if (isModelLoading) {
-    return <h2>Model Loading!</h2>;
+    // return <h2>Model Loading!</h2>;
+    return (
+      <button className="btn btn-primary loadingBtn" type="button" disabled>
+        <span
+          class="spinner-border spinner-border-sm loadanim"
+          role="status"
+          aria-hidden="true"
+        >
+          Loading...
+        </span>
+      </button>
+    );
   }
 
   console.log(imageUrl);
